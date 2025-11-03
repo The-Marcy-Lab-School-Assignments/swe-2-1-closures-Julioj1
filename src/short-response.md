@@ -24,7 +24,7 @@ The core principles of encapsulation are bundling data and methods into a single
 
 * Data Hiding: This is the fundamental principle of restricting direct access to an object's internal variables or attributes. This is accomplished by declaring them as **private**.
 ---
-
+## Question 2
 
 ### Prompt 2
 
@@ -42,7 +42,9 @@ First, define what a **closure** is in your own words and then explain how this 
 
 ### Response 2
 
-Your response here...
+A ``closure`` happens when an **inner** function remembers and can access variables from its **outer** function’s scope, even after the **outer** function has finished executing.
+
+This example includes a ``closure`` because the inner function ``(num) => num * multiplier`` has access to the variable ``multiplier`` from the **outer** scope.
 
 ---
 
