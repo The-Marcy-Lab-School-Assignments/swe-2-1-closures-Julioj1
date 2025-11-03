@@ -15,13 +15,16 @@ For each prompt below, write your response in the space provided. Aim to answer 
 
 What are the core principles of encapsulation in object-oriented programming?
 
-### Response 1
 
-Your response here...
+### Principles of Encapsulation 
 
+The core principles of encapsulation are bundling data and methods into a single unit and restricting direct access to the object's internal state through data hiding.
+
+* Bundling: Encapsulation groups an object's data and the methods that operate on that data into a single unit, or ``class``. This creates self-contained ``objects`` that are easier to manage.
+
+* Data Hiding: This is the fundamental principle of restricting direct access to an object's internal variables or attributes. This is accomplished by declaring them as **private**.
 ---
 
-## Question 2
 
 ### Prompt 2
 
