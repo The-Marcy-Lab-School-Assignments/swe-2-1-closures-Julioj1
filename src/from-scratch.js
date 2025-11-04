@@ -59,7 +59,29 @@ const makeGradeTracker = () => {
 };
 
 const makeShoppingList = () => {
-
+  const items = [];
+  const ShoppingList = {
+    getItems() {
+      return [...items]
+    },
+    addItem(item) {
+      items.push(item)
+      console.log(`${item} successfully added! Now you have ${items.length} item(s).`);
+      return items.length;
+    },
+    removeItem(item) {
+      const index = items.indexOf(item);
+      if (index !== -1) {
+        const removed = items.splice(index, 1);
+        console.log(`${removed[0]} successfully removed. You now have ${items.length} item(s).`);
+        return true;
+      } else {
+        console.log(`${item} not found.`);
+        return false;
+      }
+    }
+  }
+  return ShoppingList
 };
 
 module.exports = {
