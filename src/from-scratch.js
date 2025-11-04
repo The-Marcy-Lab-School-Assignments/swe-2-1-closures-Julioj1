@@ -23,7 +23,10 @@ const makePasswordChecker = (correctPassword) => {
 };
 
 const makeMultiplier = (multiplier) => {
-
+  const multiplicator = (arrOfNumbers) => {
+    return arrOfNumbers.map((number) => number * multiplier);
+  }
+  return multiplicator;
 };
 
 const makeFilterByLength = (length) => {
