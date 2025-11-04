@@ -30,7 +30,10 @@ const makeMultiplier = (multiplier) => {
 };
 
 const makeFilterByLength = (length) => {
-
+  const filter = (arrOfStrings) => {
+    return arrOfStrings.filter((string) => string.length <= length)
+  }
+  return filter;
 };
 
 const makeGradeTracker = () => {
