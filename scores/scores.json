@@ -21,7 +21,7 @@
     },
     "Debug Tests": {
       "DeTe1": 1,
-      "DeTe2": 0
+      "DeTe2": 1
     }
   },
   "idToTestNameHash": {
@@ -128,7 +128,7 @@
   },
   "humanReadable": {
     "From Scratch Tests": "17/17",
-    "finalTestScore": "FINAL SCORE: 18/19",
-    "Debug Tests": "1/2"
+    "finalTestScore": "FINAL SCORE: 19/19",
+    "Debug Tests": "2/2"
   }
 }
