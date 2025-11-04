@@ -15,12 +15,15 @@ For each prompt below, write your response in the space provided. Aim to answer 
 
 What are the core principles of encapsulation in object-oriented programming?
 
-### Response 1
 
-Your response here...
+### Principles of Encapsulation 
 
+The core principles of encapsulation are bundling data and methods into a single unit and restricting direct access to the object's internal state through data hiding.
+
+* Bundling: Encapsulation groups an object's data and the methods that operate on that data into a single unit, or ``class``. This creates self-contained ``objects`` that are easier to manage.
+
+* Data Hiding: This is the fundamental principle of restricting direct access to an object's internal variables or attributes. This is accomplished by declaring them as **private**.
 ---
-
 ## Question 2
 
 ### Prompt 2
@@ -39,7 +42,9 @@ First, define what a **closure** is in your own words and then explain how this 
 
 ### Response 2
 
-Your response here...
+A ``closure`` happens when an **inner** function remembers and can access variables from its **outer** function’s scope, even after the **outer** function has finished executing.
+
+This example includes a ``closure`` because the inner function ``(num) => num * multiplier`` has access to the variable ``multiplier`` from the **outer** scope.
 
 ---
 
@@ -52,9 +57,9 @@ Consider the code snippet below showing a factory function for creating animal o
 ```js
 const makeAnimal = (name, species, sound) => {
   const animal = {
-    name: name,
-    species: species,
-    makeNoise: () => {
+    name,
+    species,
+    makeNoise () {
       console.log(`${this.name} the ${this.species} says ${sound}`)
     }
   }
@@ -76,4 +81,8 @@ Finally, update the code snippet above to fix it.
 
 ### Response 3
 
-Your response here...
+### **This** keyword
+
+The ``this`` keyword refers to the context where a piece of code, such as a function's body, is supposed to run. Most typically, it is used in object methods, where ``this`` refers to the object that the method is attached to, thus allowing the same method to be reused on different objects.
+
+The makeNoise method is not working because the sintax was wrong ``makeNoise: () => { ... }`` used an arrow function. Arrow functions don’t have their own this; they inherit this from the outer lexical scope, so ``this.name`` and ``this.species`` were ``undefined``. Using the method shorthand ``(makeNoise() { ... })`` gives the method its own this when called as ``animal.makeNoise()``, which correctly refers to the animal object. also you should change the name: name, and species: species, to just name, and species since is the ES6 property shorthand for name: name, species: species.
