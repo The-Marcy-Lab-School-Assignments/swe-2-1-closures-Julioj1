@@ -37,7 +37,25 @@ const makeFilterByLength = (length) => {
 };
 
 const makeGradeTracker = () => {
-
+  const grades = [];
+  const studentsGrades = {
+    addGrade(grade) {
+      if (grade >= 0 && grade <= 100) {
+        grades.push(grade);
+        return true;
+      } else {
+        return false;
+      }
+    },
+    getAverage() {
+      if (grades.length === 0) {
+        return 0;
+      }
+      const total = grades.reduce((gradeTotal, currentGrade) => gradeTotal + currentGrade, 0);
+      return total / grades.length;
+    }
+  }
+  return studentsGrades;
 };
 
 const makeShoppingList = () => {
