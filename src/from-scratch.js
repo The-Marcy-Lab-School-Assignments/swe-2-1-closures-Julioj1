@@ -1,5 +1,10 @@
 const makeIdFunc = () => {
-
+  let count = 1;
+  const counter = () => {
+    console.log(count);
+    return count++;
+  }
+  return counter
 };
 
 const makePasswordChecker = (correctPassword) => {
