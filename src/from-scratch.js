@@ -4,11 +4,22 @@ const makeIdFunc = () => {
     console.log(count);
     return count++;
   }
-  return counter
+  return counter;
 };
 
 const makePasswordChecker = (correctPassword) => {
-
+  let count = 0;
+  const guesser = (guess) => {
+    count++;
+    if (count > 3) {
+      return "Account locked";
+    } else if (guess != correctPassword) {
+      return false;
+    } else if (guess === correctPassword) {
+      return true;
+    }
+  }
+  return guesser;
 };
 
 const makeMultiplier = (multiplier) => {
